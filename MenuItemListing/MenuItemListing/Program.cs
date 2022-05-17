@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,32 +13,29 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//string securityKey = "mysuperdupersecret";
-//SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
-//builder.Services.AddAuthentication(x =>
-//{
-//    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//    x.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
-//})
-//.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
-//{
-//    x.TokenValidationParameters = new TokenValidationParameters
-//    {
-//        //what to validate
-//        ValidateIssuer = true,
-//        ValidateAudience = true,
-//        ValidateLifetime = true,
-//        ValidateIssuerSigningKey = true,
-//        //setup validate data
-//        ValidIssuer = "mySystem",
-//        ValidAudience = "myUsers",
-//        IssuerSigningKey = symmetricSecurityKey
-//    };
-//});
-
-
-
+string securityKey = "mysuperdupersecret";
+SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
+{
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        //what to validate
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        //setup validate data
+        ValidIssuer = "mySystem",
+        ValidAudience = "myUsers",
+        IssuerSigningKey = symmetricSecurityKey
+    };
+});
 
 var app = builder.Build();
 
@@ -48,7 +46,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseAuthentication();
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
 

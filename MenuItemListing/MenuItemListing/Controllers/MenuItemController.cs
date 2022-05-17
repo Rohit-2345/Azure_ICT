@@ -8,7 +8,7 @@ namespace MenuItemListing.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,POC")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,POC")]
     public class MenuItemController : ControllerBase
     {
         [HttpGet]

@@ -26,3 +26,10 @@ C:\ADM\Azure_ICT\OrderItem\OrderItem\obj\Debug\net6.0\refint\OrderItem.dll
 C:\ADM\Azure_ICT\OrderItem\OrderItem\obj\Debug\net6.0\OrderItem.pdb
 C:\ADM\Azure_ICT\OrderItem\OrderItem\obj\Debug\net6.0\OrderItem.genruntimeconfig.cache
 C:\ADM\Azure_ICT\OrderItem\OrderItem\obj\Debug\net6.0\ref\OrderItem.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\ADM\Azure_ICT\OrderItem\OrderItem\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
